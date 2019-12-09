@@ -1,0 +1,53 @@
+.socials{
+  display: flex;
+  margin: 18px 0 20px;
+  &__link{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #959595;
+    border-radius: 2px;
+    margin-right: 5px;
+    color: #232323;
+    background-position: center;
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    transition: background-color .2s ease;
+    cursor: pointer;
+    &:hover{
+      background-color: var(--hover-bg-color);
+    }
+    &:last-child{
+      margin-right: unset;
+    }
+    &--vk{
+      --hover-bg-color: #4a6e9b;
+      background-size: 10px 10px;
+      background-image: url('../../assets/socials/vk.svg');
+    }
+    &--fb{
+      --hover-bg-color: #3b5998;
+      background-size: 7px 12px;
+      background-image: url('../../assets/socials/fb.svg');
+    }
+    &--tw{
+      --hover-bg-color: #5ab8ff ;
+      background-size: 11px 9px;
+      background-image: url('../../assets/socials/tw.svg');
+    }
+    &--ok{
+      --hover-bg-color: #ff6200;
+      background-size: 8px 12px;
+      background-image: url('../../assets/socials/ok.svg');
+    }
+    &--yt{
+      --hover-bg-color: #ff0000;
+      background-size: 13px 12px;
+      background-image: url('../../assets/socials/yt.svg');
+    }
+    &--tg{
+      --hover-bg-color: #0092de;
+      background-image: url('../../assets/socials/tg.svg');
+    }
+  }
+}

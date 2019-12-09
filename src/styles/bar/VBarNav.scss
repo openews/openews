@@ -1,0 +1,54 @@
+ul{
+  list-style: none;
+}
+li{
+
+}
+a{
+  color: var(--text-color);
+  transition: color .2s;
+  text-decoration: none;
+  &:visited{
+    // color: var(--text-visited-color);
+  }
+  &:hover{
+    color: var(--text-hover-color);
+  }
+}
+.nav{
+  --text-color: #ffffff;
+  --text-visited-color: #656565;
+  --text-hover-color: #cccccc;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  &--main{
+    --text-color: #ffffff;
+    --text-visited-color: #656565;
+    --text-hover-color: #cccccc;
+    font-weight: 700;
+  }
+  &--other{
+    --text-color: #959595;
+    --text-visited-color: #959595;
+    --text-hover-color: #cccccc;
+    font-weight: 400;
+  }
+  &__list{
+    font-family: inherit;
+  }
+  &__item{
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    font-family: inherit;
+    &--current{
+      --text-color: #cc3333;
+      --text-visited-color: #cc3333;
+      --text-hover-color: #cc3333;
+    }
+  }
+  &__link{
+    font-size: 14px;
+    font-weight: inherit;
+    font-family: inherit;
+  }
+}

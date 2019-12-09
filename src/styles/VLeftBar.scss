@@ -1,0 +1,13 @@
+.bar{
+  &__toggle{
+    display: none;
+  }
+  &__section{
+    display: block;
+    width: 200px;
+    height: 100%;
+    background-color: #242424;
+    box-shadow: inset 0 0 7px 7px #202020;
+    padding: 15px 20px;
+  }
+}

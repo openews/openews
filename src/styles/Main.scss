@@ -1,0 +1,37 @@
+.main{
+  background-color: #ffffff;
+  width: 1000px;
+  box-shadow: 0 0 15px #b1b1b1;
+  margin-left: 200px;
+  &__time{
+    margin-top: 30px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__col{
+    width: 300px;
+  }
+  &__button{
+    text-transform: uppercase;
+    color: #151515;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    font-weight: 700;
+    font-family: 'PT Sans';
+    font-size: 14px;
+    line-height: 32px;
+    padding: 0 16px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+    &:hover{
+      color: #c33;
+      box-shadow: 0 0 5px #dadada;
+      background-color: #f2f2f2;
+      background-image: linear-gradient(#fff, #f2f2f2);
+    }
+  }
+}

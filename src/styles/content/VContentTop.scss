@@ -1,0 +1,14 @@
+.top{
+  height: 90px;
+  padding: 0 15px 0 30px;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 11px solid #151515;
+  position: relative;
+  &__logo{
+    font-family: 'Death Star';
+    font-size: 50px;
+    line-height: 86px;
+  }
+}
