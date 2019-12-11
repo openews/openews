@@ -13,7 +13,7 @@
 export default {
   name: 'VContentTimeNews',
   props: {
-    pieceOfNews: {
+    item: {
       type: Object,
       default: () => ({})
     },
@@ -24,6 +24,7 @@ export default {
       path: '',
       time: 0,
       img: '',
+      short: false,
     };
   },
   mounted(){
@@ -31,7 +32,7 @@ export default {
   },
   methods: {
     setData(){
-      const { text, path, time, img, short } = this.pieceOfNews
+      const { text, path, time, img, short } = this.item
       this.text = text
       this.path = path
       this.time = this.timeFormat(time, 'HH:mm')

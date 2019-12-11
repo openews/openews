@@ -1,0 +1,48 @@
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+.news{
+  &__category{
+    font-size: 12px;
+    font-family: 'PT Serif';
+    margin-right: 5px;
+    color: #cc3333;
+    font-weight: 700;
+    &:hover{
+      color: black;
+    }
+  }
+  &__date{
+    font-size: 12px;
+    font-family: 'PT Sans';
+    color: #959595;
+  }
+  &__link-img{
+    width: 100%;
+    height: auto;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    color: #151515;
+    &:hover{
+      color: #cc3333;
+    }
+  }
+  &__img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+  &__title{
+    font-family: 'PT Sans';
+    font-size: 20px;
+    color: inherit;
+    font-weight: 700;
+  }
+  &__description{
+    color: #444444;
+    font-size: 14px;
+    font-family: 'PT Serif';
+  }
+}

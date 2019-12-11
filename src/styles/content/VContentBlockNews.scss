@@ -1,6 +1,7 @@
 .block{
   border: 1px solid #e1e0d7;
   border-top: 3px solid #c93037;
+  margin-bottom: 30px;
   &__header{
     background-color: #e1e0d7;
     font-size: 14px;
@@ -11,11 +12,17 @@
     letter-spacing: 1.4px;
   }
   &__item{
+    display: block;
     margin: 0 14px;
     padding: 12px 0;
     font-size: 14px;
     font-family: 'PT Serif';
     border-bottom: 1px solid #e1e0d7;
+    cursor: pointer;
+    transition: color .2s ease;
+    &:hover{
+      color: #cc3333;
+    }
     &:last-child{
       border-bottom: none;
     }

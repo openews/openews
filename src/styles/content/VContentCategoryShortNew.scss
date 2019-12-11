@@ -1,0 +1,10 @@
+.new{
+  font-family: 'PT Serif';
+  font-size: 14px;
+  color: #151515;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  &:hover{
+    color: #cc3333;
+  }
+}

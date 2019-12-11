@@ -31,7 +31,7 @@ body{
 
 .app{
   display: flex;
-  width: 100vw;
+  width: calc(100vw - 15px);
   background-color: #e5e5e5;
   flex-direction: row;
   align-items: stretch;

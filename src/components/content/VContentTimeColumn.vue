@@ -1,18 +1,23 @@
 <template>
   <div class="column">
-    <TimeNews v-for="(pieceOfNews, index) in news"
-              :key="index"
-              :piece-of-news="pieceOfNews"
-              class="column__item" />
+    <div v-for="(item, index) in news"
+        :key="index"
+        class="column__item"
+    >
+      <MiddleNews v-if="item.category" :item="item" />
+      <TimeNews v-else :item="item" />
+    </div>
   </div>
 </template>
 
 <script>
 import TimeNews from '@/components/content/VContentTimeNews'
+import MiddleNews from '@/components/content/VContentMiddleNews'
 
 export default {
   name: 'VContentTimeColumn',
   components: {
+    MiddleNews,
     TimeNews,
   },
   props: {

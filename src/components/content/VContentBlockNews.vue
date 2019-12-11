@@ -1,12 +1,7 @@
 <template>
   <div class="block">
     <div class="block__header">{{ header }}</div>
-    <div v-for="(item, index) in news"
-        :key="index"
-        class="block__item"
-    >
-      {{ item.text }}
-    </div>
+    <a v-for="(item, index) in news" :key="index" class="block__item">{{ item.text }}</a>
   </div>
 </template>
 

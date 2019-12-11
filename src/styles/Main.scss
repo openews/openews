@@ -1,4 +1,6 @@
 .main{
+  --col-width: 300px;
+  --between-col-space: 20px;
   background-color: #ffffff;
   width: 1000px;
   box-shadow: 0 0 15px #b1b1b1;
@@ -8,9 +10,36 @@
     padding: 0 30px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__category{
+    background-color: #f2f2f2;
+    padding: 40px 30px 0;
+  }
+  &__focus{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: calc(var(--col-width) * 2 + var(--between-col-space));
+  }
+  &__aside{
+    width: var(--col-width);
+  }
+  &__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
   &__col{
-    width: 300px;
+    width: var(--col-width);
+    &--2{
+      width: calc(var(--col-width) * 2 + var(--between-col-space));
+    }
   }
   &__button{
     text-transform: uppercase;
@@ -33,5 +62,21 @@
       background-color: #f2f2f2;
       background-image: linear-gradient(#fff, #f2f2f2);
     }
+  }
+  &__up{
+    position: fixed;
+    top: 25px;
+    left: 1225px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #d5d5d5;
+    background-color: #ffffff;
+    background-image: url(../assets/arrow-up.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
   }
 }

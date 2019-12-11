@@ -1,0 +1,31 @@
+.new{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  text-decoration: none;
+  &:hover{
+    .new__title{
+      color: #cc3333;
+    }
+  }
+  &__img{
+    width: 32%;
+    height: auto;
+  }
+  &__text{
+    width: 63%;
+  }
+  &__title{
+    transition: color .2s ease;
+    font-weight: 700;
+    font-family: 'PT Sans';
+    color: #151515;
+    font-size: 14px;
+  }
+  &__description{
+    font-family: 'PT Serif';
+    font-size: 14px;
+    color: #454545;
+  }
+}

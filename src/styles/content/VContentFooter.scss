@@ -1,0 +1,24 @@
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #151515;
+  height: 67px;
+  &__links{
+    display: flex;
+    list-style: none;
+  }
+  &__link{
+    font-size: 12px;
+    margin-right: 20px;
+    color: #959595;
+    font-family: 'PT Sans';
+  }
+  &__company-name{
+    color: #444444;
+    font-family: 'PT Sans';
+    font-size: 12px;
+  }
+}
