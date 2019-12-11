@@ -55,7 +55,7 @@
       </div>
     </div>
     <VFooter />
-    <button class="main__up"></button>
+    <button @click="scrollTop()" class="main__up"></button>
   </div>
 </template>
 
@@ -173,8 +173,11 @@ export default {
         }
       })
       return obj
-    }
-  }
+    },
+    scrollTop(){
+      document.scrollingElement.scrollTop = 0
+    },
+  },
 };
 </script>
 
