@@ -1,6 +1,6 @@
 <template>
   <div class="top">
-    <div class="top__logo">NEWS . SPD</div>
+    <div class="top__logo">OPENEWS</div>
   </div>
 </template>
 

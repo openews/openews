@@ -9,7 +9,7 @@
       <li class="footer__link">Вакансии</li>
       <li class="footer__link">RSS</li>
     </ul>
-    <div class="footer__company-name">©spd 2019-2020</div>
+    <div class="footer__company-name">©openews 2019-2020</div>
   </footer>
 </template>
 
