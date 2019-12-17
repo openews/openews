@@ -1,0 +1,13 @@
+.piece{
+  &__title{
+    font-family: "PT Sans";
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  &__text{
+    margin: 10px 0;
+  }
+  &__img{
+    max-width: 100%;
+  }
+}
