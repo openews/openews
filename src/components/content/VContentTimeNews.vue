@@ -1,10 +1,11 @@
 <template>
-  <div class="news" :class="newsStyle()">
-    <a class="news__link-img" :href="path">
-      <img :src="img" :alt="text" class="news__img">
-    </a>
+  <div ref="main" class="news" :class="mainClass()">
+    <div class="news__bg"></div>
+    <button v-if="this.img" @click="openClose()" class="news__button"></button>
     <a :href="path" class="news__link">
-      <time v-if="time" class="news__time">{{ time }}</time>{{ text }}
+      <time v-if="time" class="news__time">{{ time }}</time>
+      <div class="news__title">{{ text }}</div>
+      <div class="news__text">{{ text + ' ' + text + ' ' + text }}</div>
     </a>
   </div>
 </template>
@@ -24,28 +25,35 @@ export default {
       path: '',
       time: 0,
       img: '',
-      short: false,
+      vibrantColor: '',
+      opened: false,
     };
   },
-  mounted(){
-    this.setData()
+  async mounted(){
+    await this.setData()
+    await this.setStyles()
   },
   methods: {
-    setData(){
+    async setData(){
       const { text, path, time, img, short } = this.item
       this.text = text
       this.path = path
       this.time = this.timeFormat(time, 'HH:mm')
-      this.img = img
-      this.short = short
+      this.img = img()
     },
-    newsStyle(){
-      let result = ''
-      result += this.img === undefined || this.short === true ? '' : ' news--with-img'
-      return result
+    async setStyles(){
+      this.$refs.main.style.setProperty('--bg-img', `url(${this.img})`)
     },
     timeFormat(time, format){
       return this.$date(time, format)
+    },
+    mainClass(){
+      let result = ''
+      result += this.opened ? 'news--opened' : ''
+      return result
+    },
+    openClose(){
+      this.opened = !this.opened
     },
   },
 };

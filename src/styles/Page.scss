@@ -1,4 +1,4 @@
-.main{
+.page{
   --col-width: 300px;
   --between-col-space: 20px;
   background-color: #ffffff;
@@ -10,7 +10,9 @@
     padding: 0 30px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    width: 1000px;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
   }
   &__category{
     background-color: #f2f2f2;

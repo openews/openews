@@ -4,8 +4,7 @@
         :key="index"
         class="column__item"
     >
-      <MiddleNews v-if="item.category" :item="item" />
-      <TimeNews v-else :item="item" />
+      <TimeNews :item="item" />
     </div>
   </div>
 </template>

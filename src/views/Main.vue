@@ -1,61 +1,22 @@
 <template>
-  <div class="main">
+  <div class="page">
     <Top />
-    <div class="main__time">
-      <div class="main__focus">
-        <div class="main__row">
-          <div class="main__col">
-            <TimeColumn :news="news1" />
-          </div>
-          <div class="main__col">
+    <div class="page__time">
+      <div class="page__focus">
+        <div class="page__row">
+          <div class="page__col page__col--2">
             <TimeColumn :news="news2" />
-            <a class="main__button">Больше новостей</a>
-          </div>
-        </div>
-        <div class="main__row">
-          <div class="main__col main__col--2">
-            <BigNews :item="bigNew" />
-          </div>
-        </div>
-        <div class="main__row">
-          <div class="main__col">
-            <MiddleNews :item="configNew" />
-          </div>
-          <div class="main__col">
-            <MiddleNews :item="configNew" />
-          </div>
-        </div>
-        <div class="main__row">
-          <div class="main__col">
-            <TimeColumn :news="news4" />
-          </div>
-          <div class="main__col">
-            <TimeColumn :news="news5" />
           </div>
         </div>
       </div>
-      <div class="main__aside">
-        <div class="main__col">
+      <div class="page__aside">
+        <div class="page__col">
           <BlockNews header="Важные новости" :news="news3" />
-          <TimeColumn :news="news6" />
-        </div>
-      </div>
-    </div>
-    <div class="main__category">
-      <div v-for="(cats, index) in categories" :key="index" class="main__row">
-        <div class="main__col">
-          <CategoryColumn :header="cats[0]" :news="categoryNews" />
-        </div>
-        <div class="main__col">
-          <CategoryColumn :header="cats[1]" :news="categoryNews" />
-        </div>
-        <div class="main__col">
-          <CategoryColumn :header="cats[2]" :news="categoryNews" />
         </div>
       </div>
     </div>
     <VFooter />
-    <button @click="scrollTop()" class="main__up"></button>
+    <button @click="scrollTop()" class="page__up"></button>
   </div>
 </template>
 
@@ -81,34 +42,27 @@ export default {
   },
   data() {
     return {
-      longNew: {
-        text: 'Стартовала эксполярная миссия по дифлекации суборбитальных энертных элементов',
-        path: 'example',
-        time: 1575900368369,
-        img: 'https://picsum.photos/300/200',
-      },
       shortNew: {
-        text: 'Стартовала эксполярная миссия по дифлекации суборбитальных энертных элементов',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat odit eveniet, debitis modi dolore quidem?',
         path: 'example',
         time: 1575900368369,
-        img: 'https://picsum.photos/300/200',
-        short: true,
+        img: (i) => this.i || this.i === 0 ? require(`../assets/imgs/${this.i++}.jpg`) : require(`../assets/imgs/0.jpg`),
       },
       textNew: {
-        text: 'Стартовала эксполярная миссия по дифлекации суборбитальных энертных элементов',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat odit eveniet, debitis modi dolore quidem?',
         path: 'example',
       },
       bigNew: {
         category: 'Обо всём',
-        title: "Произошёл взрыв сверхновой",
-        description: "Взрывная популярность нового трэка сверха",
+        title: "Lorem ipsum dolor sit amet,",
+        description: "ВLorem ipsum dolor sit amet, consectetur adipisicing elit.",
         date: 1575900368369,
         path: 'example',
         img: 'https://picsum.photos/620/310',
       },
       configNew: {
-        title: 'Очередная сенсация',
-        description: 'Кого-то где-то убили.',
+        title: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet.',
         date: 1575900368369,
         path: 'example',
         img: 'https://picsum.photos/620/310',
@@ -116,8 +70,8 @@ export default {
       },
       categoryNew: {
         img: 'https://picsum.photos/96/64',
-        title: 'Кроличьи бега',
-        description: 'Почему программисты так долго искали баг, если проект уже был в продакшене?',
+        title: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat odit eveniet, quidem?',
         path: 'example',
       },
       categories: [
@@ -144,7 +98,7 @@ export default {
       return this.generate([{ 1: this.longNew }, { 2: this.shortNew }])
     },
     news2() {
-      return this.generate([{ 7: this.shortNew }])
+      return this.generate([{ 10: this.shortNew }])
     },
     news3() {
       return this.generate([{ 7: this.textNew }])
@@ -164,6 +118,7 @@ export default {
   },
   methods: {
     generate(configs){
+      this.i = 0
       let obj = []
       configs.forEach(config => {
         const number = Object.keys(config)[0]
@@ -181,6 +136,6 @@ export default {
 };
 </script>
 
-<style scoped lang="scss" src="@/styles/Main.scss">
+<style scoped lang="scss" src="@/styles/Page.scss">
 
 </style>
