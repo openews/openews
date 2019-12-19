@@ -1,0 +1,38 @@
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  &__bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &__body {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    border-radius: 12px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+  &__label {
+    margin-right: 5px;
+    margin-bottom: 4px;
+    padding: 2px 5px;
+    color: #ffffff;
+    font-family: 'PT Sans';
+    background-color: #242424;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+}
