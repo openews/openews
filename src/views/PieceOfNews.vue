@@ -4,17 +4,17 @@
     <div class="page__time">
       <div class="page__focus">
         <div class="page__row">
-          <div class="page__col page__col--2">
+          <div class="page__col page__col--3">
+            <VPieceOfNews style="margin-bottom: 50px" />
             <Labels :labels="labels" @openAllLabels="openAllLabels" />
-            <VPieceOfNews />
           </div>
         </div>
       </div>
-      <div class="page__aside">
+      <!-- <div class="page__aside">
         <div class="page__col">
           <BlockNews header="Важные новости" :news="news3" />
         </div>
-      </div>
+      </div>-->
     </div>
     <VFooter />
     <button @click="scrollTop()" class="page__up"></button>

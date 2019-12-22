@@ -1,12 +1,7 @@
 <template>
   <div class="labels">
-    <a
-      v-for="(label, index) in firstLabels(14)"
-      :key="index"
-      href="#"
-      class="labels__label"
-    >{{label}}</a>
-    <button @click="openAll()" class="labels__button" title="Показать все ярлыки">...</button>
+    <a v-for="(label, index) in theLabels" :key="index" href="#" class="labels__label">{{label}}</a>
+    <!-- <button @click="openAll()" class="labels__button" title="Показать все ярлыки">...</button> -->
   </div>
 </template>
 

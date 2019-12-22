@@ -1,11 +1,11 @@
-.page{
+.page {
   --col-width: 300px;
   --between-col-space: 20px;
   background-color: #ffffff;
   width: 1000px;
   box-shadow: 0 0 15px #b1b1b1;
   margin-left: 200px;
-  &__time{
+  &__time {
     margin-top: 30px;
     padding: 0 30px;
     display: flex;
@@ -14,36 +14,39 @@
     flex-wrap: nowrap;
     margin-bottom: 30px;
   }
-  &__category{
+  &__category {
     background-color: #f2f2f2;
     padding: 40px 30px 0;
   }
-  &__focus{
+  &__focus {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: column;
     width: calc(var(--col-width) * 2 + var(--between-col-space));
   }
-  &__aside{
+  &__aside {
     width: var(--col-width);
   }
-  &__row{
+  &__row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
-  &__col{
+  &__col {
     width: var(--col-width);
-    &--2{
+    &--2 {
       width: calc(var(--col-width) * 2 + var(--between-col-space));
     }
+    &--3 {
+      width: calc(var(--col-width) * 3 + var(--between-col-space) * 2);
+    }
   }
-  &__button{
+  &__button {
     text-transform: uppercase;
     color: #151515;
     border: 1px solid #d5d5d5;
@@ -58,14 +61,14 @@
     text-align: center;
     margin-top: 5px;
     cursor: pointer;
-    &:hover{
+    &:hover {
       color: #c33;
       box-shadow: 0 0 5px #dadada;
       background-color: #f2f2f2;
       background-image: linear-gradient(#fff, #f2f2f2);
     }
   }
-  &__up{
+  &__up {
     position: fixed;
     top: 25px;
     left: 1225px;
